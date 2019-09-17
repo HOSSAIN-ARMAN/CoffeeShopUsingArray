@@ -18,7 +18,7 @@ namespace CoffeShopUsingArray
         }
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            int arraySize = 5, quantity, countArrayIndex=0, totalAmount, customerContact;
+            int arraySize = 1, quantity, countArrayIndex=0, totalAmount, customerContact;
             customerContact = Convert.ToInt32(contactTextBox.Text);
             quantity = Convert.ToInt32(quantityTextBox.Text);
             string[] customerInfo = new string[arraySize];
@@ -52,6 +52,10 @@ namespace CoffeShopUsingArray
                     MessageBox.Show("Please select Item");
                 }
                 countArrayIndex++;
+            }
+            else
+            {
+                MessageBox.Show("Array is full");
             }
             for(int i = 0; i<arraySize; i++)
             {
